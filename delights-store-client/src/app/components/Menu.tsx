@@ -1,0 +1,56 @@
+"use client"
+import Image from 'next/image'
+import Link from 'next/link'
+import React, { useState } from 'react'
+
+const links =[
+  {id: 1, title: "Homepage", url: "/"},
+  {id: 2, title: "Menu", url: "/menu"},
+  {id: 3, title: "Working Hours", url: "/"},
+  {id: 4, title: "Contact", url: "/"},
+]
+
+const Menu = () => {
+    const [open, setOpen] = useState(false);
+    const user = false;
+  return (
+    <div>
+        {!open ?(
+            <Image 
+            src='/temporary/open.png' 
+            alt='' 
+            width={20} 
+            height={20} 
+            onClick={()=>setOpen(true)}/>
+
+        ):(
+            <Image 
+            src='/temporary/close.png' 
+            alt='' 
+            width={20} 
+            height={20} 
+            onClick={()=>setOpen(false)}/>
+        )
+        }
+        <div className='bg-red-300 text-white absolute left-0 top-24 h-[calc(100vh-6rem)] 
+        flex flex-col gap-8 w-full items-center justify-center text-3xl z-10'>
+          {
+            links.map((item)=>(
+              <Link key={item.id} href={item.url}>
+                {item.title}
+              </Link>
+            ))
+          }
+          {!user ?(
+            <Link href="/login">Login</Link>
+          ):(
+            <Link href="/orders">Orders</Link>
+          )
+          }
+          <Link href="/cart"></Link>
+        </div>
+    </div>
+  )
+}
+
+export default Menu
