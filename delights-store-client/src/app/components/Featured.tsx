@@ -3,7 +3,7 @@ import React from 'react'
 
 const Featured = () => {
   return (
-    <div className='w-screen overflow-x-scroll text-red-400'>
+    <div className='w-screen overflow-x-scroll text-red-500'>
       {/* wrapper */}
       <div className='w-max flex'>
         {/* single item */}
@@ -14,11 +14,11 @@ const Featured = () => {
           </div>
 
           {/* text container */}
-          <div className='flex-1'>
-            <h1>Title</h1>
+          <div className='flex-1 flex flex-col gap-4'>
+            <h1 className='text-xl font-bold uppercase'>Title</h1>
             <p>Desc</p>
-            <span>123</span>
-            <button>Add to Cart</button>
+            <span className='text-xl font-bold'>$123</span>
+            <button className='bg-red-500 text-white rounded-md p-2'>Add to Cart</button>
           </div>
         </div>
       </div>
