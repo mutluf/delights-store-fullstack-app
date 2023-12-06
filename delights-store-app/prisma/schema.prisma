@@ -40,7 +40,6 @@ model Order{
   price Decimal
   products Json[]
   status String
-
   //stripe id - payment things
   intent_id String? @unique
 }
