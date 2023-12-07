@@ -15,3 +15,13 @@ export type ProductType={
     price: number;
     options?: {title: string, additionalPrice: string}[];
 };
+
+export type OrderType = {
+    id: string;
+    userEmail: string;
+    price: number;
+
+    status: string;
+    createdAt: Date;
+    intent_id?: String;
+  };
