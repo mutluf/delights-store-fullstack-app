@@ -7,7 +7,7 @@ This project is a project made by following Lamadev's course step by step. A ful
 ![homepage.png](https://github.com/mutluf/delights-store-fullstack-app/blob/main/delights-store-app/public/temporary/delights-ss/homepage.png)
 <br/>
 <br/>
-# slider
+slider
 <br/>
 ![slider.jpg.png](https://github.com/mutluf/delights-store-fullstack-app/blob/main/delights-store-app/public/temporary/delights-ss/slider.jpg.png)
 <br/>
