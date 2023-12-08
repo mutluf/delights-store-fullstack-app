@@ -77,7 +77,7 @@ model Product {
   price      Decimal
   isFeatured Boolean  @default(false)
   options    Json[]
-  category   Category @relation(fields: [categorySlug], references: [slug])
+  category   Category? @relation(fields: [categorySlug], references: [slug])
   categorySlug    String
 }
 
